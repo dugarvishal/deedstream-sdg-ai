@@ -104,12 +104,12 @@ const Feed = () => {
                 {/* Location Filter */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Location</label>
-                  <Select value={selectedLocation} onValueChange={setSelectedLocation}>
+                  <Select value={selectedLocation} onValueChange={(value) => setSelectedLocation(value === "all-locations" ? "" : value)}>
                     <SelectTrigger>
                       <SelectValue placeholder="All locations" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All locations</SelectItem>
+                      <SelectItem value="all-locations">All locations</SelectItem>
                       {locations.map(location => (
                         <SelectItem key={location} value={location}>{location}</SelectItem>
                       ))}
@@ -120,12 +120,12 @@ const Feed = () => {
                 {/* Gender Filter */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Gender</label>
-                  <Select value={selectedGender} onValueChange={setSelectedGender}>
+                  <Select value={selectedGender} onValueChange={(value) => setSelectedGender(value === "all-genders" ? "" : value)}>
                     <SelectTrigger>
                       <SelectValue placeholder="All genders" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All genders</SelectItem>
+                      <SelectItem value="all-genders">All genders</SelectItem>
                       {genders.map(gender => (
                         <SelectItem key={gender} value={gender}>{gender}</SelectItem>
                       ))}
@@ -136,12 +136,12 @@ const Feed = () => {
                 {/* Age Filter */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Age Group</label>
-                  <Select value={selectedAge} onValueChange={setSelectedAge}>
+                  <Select value={selectedAge} onValueChange={(value) => setSelectedAge(value === "all-ages" ? "" : value)}>
                     <SelectTrigger>
                       <SelectValue placeholder="All ages" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All ages</SelectItem>
+                      <SelectItem value="all-ages">All ages</SelectItem>
                       {ages.map(age => (
                         <SelectItem key={age} value={age}>{age}</SelectItem>
                       ))}
