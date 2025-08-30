@@ -34,7 +34,7 @@ const Index = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/submit">
-                  <Button variant="hero" size="lg" className="w-full sm:w-auto">
+                  <Button variant="impact" size="lg" className="w-full sm:w-auto">
                     <Heart className="w-5 h-5" />
                     Share Your Deed
                   </Button>
